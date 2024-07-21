@@ -22,8 +22,8 @@ class KITTIDataset(data.Dataset):
         super().__init__()
 
         #protocol setting
-        db_frames = {'00': range(0,3000), '02': range(0,3400), '05': range(0,1000), '06': range(0,600)}
-        query_frames = {'00': range(3200, 4541), '02': range(3600, 4661), '05': range(1200,2751), '06': range(800,1101)}
+        db_frames = {'00': range(0,100), '02': range(0,3400), '05': range(0,1000), '06': range(0,600)}
+        query_frames = {'00': range(101, 150), '02': range(3600, 4661), '05': range(1200,2751), '06': range(800,1101)}
         
         self.pos_threshold = 5   #ground truth threshold
         
@@ -36,12 +36,12 @@ class KITTIDataset(data.Dataset):
         bev_path = data_path + '/'+seq+'/' + '/imgs/'
         lidar_path = data_path+ '/'+seq+'/' + '/velodyne/'
 
-        #geometry positions
-        poses = np.loadtxt(data_path+'/'+ seq+'/pose.txt')
-        positions = np.hstack([poses[:,3].reshape(-1,1),  poses[:,7].reshape(-1,1)])
+        # #geometry positions
+        # poses = np.loadtxt(data_path+'/'+ seq+'/pose.txt')
+        # positions = np.hstack([poses[:,3].reshape(-1,1),  poses[:,7].reshape(-1,1)])
 
-        self.db_positions = positions[db_frames[seq], :]
-        self.query_positions = positions[query_frames[seq], :]
+        # self.db_positions = positions[db_frames[seq], :]
+        # self.query_positions = positions[query_frames[seq], :]
 
         self.num_db = len(db_frames[seq])
 
@@ -54,8 +54,53 @@ class KITTIDataset(data.Dataset):
         for idx in query_frames[seq]:
             self.images.append(bev_path+images[idx])     
 
-        self.positives = None
-        self.distances = None
+        # self.positives = None
+        # self.distances = None
+
+class ANADataset(data.Dataset):
+    def __init__(self, data_path, seq):
+        super().__init__()
+
+        #root paths
+        bev_path = data_path + '/'+seq+'/' + '/images/'
+        # bev_path = data_path + '/'+seq+'/' + '/scans/'
+        # bev_path = data_path + '/'+seq+'/' + '/grids/'
+        # lidar_path = data_path+ '/'+seq+'/' + '/velodyne/'
+
+        #protocol setting
+        # db_frames = {'00': range(0,100), '02': range(0,3400), '05': range(0,1000), '06': range(0,600)}
+        # query_frames = {'00': range(101, 150), '02': range(3600, 4661), '05': range(1200,2751), '06': range(800,1101)}
+        
+        # self.pos_threshold = 5   #ground truth threshold
+        
+        #preprocessor
+        self.input_transform = input_transform()
+        self.transformer = TransformerCV(group_config)
+        self.pts_step = 5
+
+
+        # #geometry positions
+        # poses = np.loadtxt(data_path+'/'+ seq+'/pose.txt')
+        # positions = np.hstack([poses[:,3].reshape(-1,1),  poses[:,7].reshape(-1,1)])
+
+        # self.db_positions = positions[db_frames[seq], :]
+        # self.query_positions = positions[query_frames[seq], :]
+
+        # self.num_db = len(db_frames[seq])
+
+        #image paths
+        images = os.listdir(bev_path)
+        images.sort()
+        self.images = []
+        for idx in range(len(images)):
+            self.images.append(bev_path+images[idx])
+        # for idx in db_frames[seq]:
+        #     self.images.append(bev_path+images[idx])
+        # for idx in query_frames[seq]:
+        #     self.images.append(bev_path+images[idx])     
+
+        # self.positives = None
+        # self.distances = None
 
     def transformImg(self, img):
         xs, ys = np.meshgrid(np.arange(self.pts_step,img.size()[1]-self.pts_step,self.pts_step), np.arange(self.pts_step,img.size()[2]-self.pts_step,self.pts_step))
