@@ -148,11 +148,16 @@ if __name__ == "__main__":
         model = nn.DataParallel(model)
         # model = model.to(device)
 
-    data_path = './data/KITTIRot/'
-    recall_seq = {"00":0, "02":0, "05":0, "06":0}
-    for seq in list(recall_seq.keys()):
-        print('===> Processing KITTI Seq. %s'%(seq))
-        eval_set = dataset.KITTIDataset(data_path, seq)
-        recalls = evaluate(eval_set, model)
-        recall_seq[seq] = recalls[1]
-    print("===> Recalls@1", recall_seq)
+    # data_path = './data/KITTIRot/'
+    # recall_seq = {"00":0, "02":0, "05":0, "06":0}
+    # for seq in list(recall_seq.keys()):
+    #     print('===> Processing KITTI Seq. %s'%(seq))
+    #     eval_set = dataset.KITTIDataset(data_path, seq)
+    #     recalls = evaluate(eval_set, model)
+    #     recall_seq[seq] = recalls[1]
+    # print("===> Recalls@1", recall_seq)
+
+    data_path = '/home/ubuntu/Downloads/BEV/'
+    seq = '05'
+    eval_set = dataset.ANADataset(data_path, seq)
+    recalls = evaluate2(eval_set, model)

@@ -1,7 +1,8 @@
+from sklearn.neighbors import NearestNeighbors
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from sklearn.neighbors import NearestNeighbors
 import numpy as np
 
 class GeneralizedMeanPooling(nn.Module):
