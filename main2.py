@@ -8,7 +8,6 @@ import numpy as np
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
-import faiss
 from network.bevplace import BEVPlace
 from network.utils import to_cuda
 
@@ -22,61 +21,6 @@ parser.add_argument('--nGPU', type=int, default=1, help='number of GPU to use.')
 parser.add_argument('--nocuda', action='store_true', help='Dont use cuda')
 parser.add_argument('--threads', type=int, default=4, help='Number of threads for each data loader to use')
 parser.add_argument('--resume', type=str, default='checkpoints/checkpoint_paper_kitti.pth.tar', help='Path to load checkpoint from, for resuming training or testing.')
-
-
-def evaluate(eval_set, model):
-    test_data_loader = DataLoader(dataset=eval_set, 
-                num_workers=opt.threads, batch_size=opt.test_batch_size, shuffle=False, 
-                pin_memory=cuda)
-
-    model.eval()
-
-    global_features = []
-    with torch.no_grad():
-        print('====> Extracting Features')
-        with tqdm(total=len(test_data_loader)) as t:
-            for iteration, (input, indices) in enumerate(test_data_loader, 1):
-                if cuda:
-                    input = to_cuda(input)
-                batch_feature = model(input)
-                global_features.append(batch_feature.detach().cpu().numpy())
-                t.update(1)
-
-    global_features = np.vstack(global_features)
-
-    query_feat = global_features[eval_set.num_db:].astype('float32')
-    db_feat = global_features[:eval_set.num_db].astype('float32')
-
-    # print('====> Building faiss index')
-    faiss_index = faiss.IndexFlatL2(query_feat.shape[1])
-    faiss_index.add(db_feat)
-
-    # print('====> Calculating recall @ N')
-    n_values = [1,5,10,20]
-
-    _, predictions = faiss_index.search(query_feat, max(n_values)) 
-
-    gt = eval_set.getPositives() 
-
-    correct_at_n = np.zeros(len(n_values))
-    whole_test_size = 0
-
-    for qIx, pred in enumerate(predictions):
-        if len(gt[qIx]) ==0 : 
-            continue
-        whole_test_size+=1
-        for i,n in enumerate(n_values):
-            if np.any(np.in1d(pred[:n], gt[qIx])):
-                correct_at_n[i:] += 1
-                break
-    recall_at_n = correct_at_n / whole_test_size
-    # print("tp+fn=%d"%(whole_test_size))
-    recalls = {} 
-    for i,n in enumerate(n_values):
-        recalls[n] = recall_at_n[i]
-    #     print("====> Recall@{}: {:.4f}".format(n, recall_at_n[i]))
-
-    return recalls
 
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -147,15 +91,6 @@ if __name__ == "__main__":
     if cuda:
         model = nn.DataParallel(model)
         # model = model.to(device)
-
-    # data_path = './data/KITTIRot/'
-    # recall_seq = {"00":0, "02":0, "05":0, "06":0}
-    # for seq in list(recall_seq.keys()):
-    #     print('===> Processing KITTI Seq. %s'%(seq))
-    #     eval_set = dataset.KITTIDataset(data_path, seq)
-    #     recalls = evaluate(eval_set, model)
-    #     recall_seq[seq] = recalls[1]
-    # print("===> Recalls@1", recall_seq)
 
     data_path = '/home/ubuntu/Downloads/BEV/'
     seq = '05'

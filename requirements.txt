@@ -1,4 +1,3 @@
-faiss-gpu
 numpy
 opencv-python
 scikit-image
