@@ -58,6 +58,28 @@ class KITTIDataset(data.Dataset):
         self.positives = None
         self.distances = None
 
+    def transformImg(self, img):
+        xs, ys = np.meshgrid(np.arange(self.pts_step,img.size()[1]-self.pts_step,self.pts_step), np.arange(self.pts_step,img.size()[2]-self.pts_step,self.pts_step))
+        xs=xs.reshape(-1,1)
+        ys = ys.reshape(-1,1)
+        pts = np.hstack((xs,ys))
+        img = img.permute(1,2,0).detach().numpy()
+        transformed_imgs=self.transformer.transform(img,pts)
+        data = self.transformer.postprocess_transformed_imgs(transformed_imgs)
+        return data
+    
+    def __getitem__(self, index):
+        img = Image.open(self.images[index]).convert('RGB')
+        img = self.input_transform(img)
+        img*=255
+        img = self.transformImg(img)
+        
+        return  img, index
+    
+    def __len__(self):
+        return len(self.images)
+    
+
 class ANADataset(data.Dataset):
     def __init__(self, data_path, seq):
         super().__init__()
