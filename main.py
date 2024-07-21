@@ -96,7 +96,7 @@ if __name__ == "__main__":
     resume_ckpt = opt.resume
 
     print("=> loading checkpoint '{}'".format(resume_ckpt))
-    checkpoint = torch.load(resume_ckpt, map_location=lambda storage, loc: storage, weights_only=True)
+    checkpoint = torch.load(resume_ckpt, map_location=lambda storage, loc: storage) #, weights_only=True)
     model.load_state_dict(checkpoint['state_dict'],strict=False)
     model = model.to(device)
     print("=> loaded checkpoint '{}' (epoch {})"
