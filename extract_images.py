@@ -1,7 +1,5 @@
 import cv2
 import os
-import cv2
-import os
 
 def extract_rectangles_from_directory(image_dir, output_dir, x, y, width, height, resize_factor=None):
   """
@@ -101,7 +99,7 @@ def save_extracted_image(image_path, extracted_image, output_dir):
 # Define image directory, rectangle coordinates, output directory
 
 data_path = '/home/ubuntu/Downloads/BEV'
-seq = '08'
+seq = '05'
 
 # Define image directory, rectangle coordinates, and output directory
 image_dir = f"/home/ubuntu/Anantak/SensorUnit/data/Map/ImageData/0{seq}/05"

@@ -59,8 +59,8 @@ class KITTIDataset(data.Dataset):
         self.distances = None
 
     def transformImg(self, img):
-        xs, ys = np.meshgrid(np.arange(self.pts_step,img.size()[1]-self.pts_step,self.pts_step), np.arange(self.pts_step,img.size()[2]-self.pts_step,self.pts_step))
-        xs=xs.reshape(-1,1)
+        xs,ys = np.meshgrid(np.arange(self.pts_step,img.size()[1]-self.pts_step,self.pts_step), np.arange(self.pts_step,img.size()[2]-self.pts_step,self.pts_step))
+        xs = xs.reshape(-1,1)
         ys = ys.reshape(-1,1)
         pts = np.hstack((xs,ys))
         img = img.permute(1,2,0).detach().numpy()
@@ -85,8 +85,10 @@ class ANADataset(data.Dataset):
         super().__init__()
 
         #root paths
-        bev_path = data_path + '/'+seq+'/' + '/images/'
-        # bev_path = data_path + '/'+seq+'/' + '/scans/'
+        # bev_path = data_path + '/'+seq+'/' + '/images/'
+        # bev_path = data_path + '/'+seq+'/' + '/images_00/'
+        # bev_path = data_path + '/'+seq+'/' + '/images_01/'
+        bev_path = data_path + '/'+seq+'/' + '/scans/'
         # bev_path = data_path + '/'+seq+'/' + '/grids/'
         # lidar_path = data_path+ '/'+seq+'/' + '/velodyne/'
 
@@ -127,7 +129,7 @@ class ANADataset(data.Dataset):
 
     def transformImg(self, img):
         xs, ys = np.meshgrid(np.arange(self.pts_step,img.size()[1]-self.pts_step,self.pts_step), np.arange(self.pts_step,img.size()[2]-self.pts_step,self.pts_step))
-        xs=xs.reshape(-1,1)
+        xs = xs.reshape(-1,1)
         ys = ys.reshape(-1,1)
         pts = np.hstack((xs,ys))
         img = img.permute(1,2,0).detach().numpy()
