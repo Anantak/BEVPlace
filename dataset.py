@@ -81,7 +81,7 @@ class KITTIDataset(data.Dataset):
     
 
 class ANADataset(data.Dataset):
-    def __init__(self, data_path, seq):
+    def __init__(self, data_path, seq, seq2=''):
         super().__init__()
 
         #root paths
@@ -102,7 +102,6 @@ class ANADataset(data.Dataset):
         self.input_transform = input_transform()
         self.transformer = TransformerCV(group_config)
         self.pts_step = 5
-
 
         # #geometry positions
         # poses = np.loadtxt(data_path+'/'+ seq+'/pose.txt')
@@ -126,6 +125,14 @@ class ANADataset(data.Dataset):
 
         # self.positives = None
         # self.distances = None
+
+        if (seq2 != ''):
+            bev_path2 = data_path + '/'+seq2+'/' + '/scans/'
+            images2 = os.listdir(bev_path2)
+            images2.sort()
+            for idx in range(len(images2)):
+                self.images.append(bev_path2+images2[idx])
+
 
     def transformImg(self, img):
         xs, ys = np.meshgrid(np.arange(self.pts_step,img.size()[1]-self.pts_step,self.pts_step), np.arange(self.pts_step,img.size()[2]-self.pts_step,self.pts_step))

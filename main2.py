@@ -25,6 +25,8 @@ parser.add_argument('--nocuda', action='store_true', help='Dont use cuda')
 parser.add_argument('--threads', type=int, default=4, help='Number of threads for each data loader to use')
 parser.add_argument('--resume', type=str, default='checkpoints/checkpoint_paper_kitti.pth.tar', help='Path to load checkpoint from, for resuming training or testing.')
 
+parser.add_argument('--seq', type=str, default='', help='seq string for images dir.')
+parser.add_argument('--seq2', type=str, default='', help='seq number for second images dir.')
 
 def evaluate2(eval_set, model):
     test_data_loader = DataLoader(dataset=eval_set, 
@@ -38,7 +40,7 @@ def evaluate2(eval_set, model):
         print('====> Extracting Features')
         with tqdm(total=len(test_data_loader)) as t:
             for iteration, (input, indices) in enumerate(test_data_loader, 1):
-                print(input[1][0].shape) # this is the image shape
+                # print(input[1][0].shape) # this is the image shape
                 if cuda:
                     input = to_cuda(input)
                 batch_feature = model(input)
@@ -47,10 +49,10 @@ def evaluate2(eval_set, model):
 
     global_features = np.vstack(global_features)
     # print(global_features)
-    print(global_features.shape)
+    # print(global_features.shape)
 
     corr_mat = np.dot(global_features, global_features.T)
-    print(corr_mat.shape)
+    # print(corr_mat.shape)
 
     # Create a heatmap using Seaborn
     sns.heatmap(corr_mat, cmap="coolwarm")
@@ -92,6 +94,5 @@ if __name__ == "__main__":
         # model = model.to(device)
 
     data_path = '/home/ubuntu/Downloads/BEV'
-    seq = '2005'
-    eval_set = dataset.ANADataset(data_path, seq)
+    eval_set = dataset.ANADataset(data_path, opt.seq, opt.seq2)
     recalls = evaluate2(eval_set, model)
