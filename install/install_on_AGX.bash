@@ -1,3 +1,5 @@
+#!/bin/bash
+
 python3 --version
 # Python 3.6.9
 
@@ -12,12 +14,12 @@ python3 --version
 
 
 # We first need to install scikit-image and scikit-learn 
-sudo apt-get install python3-sklearn python3-sklearn-lib 
-sudo apt-get install python3-skimage python3-skimage-lib
-sudo apt-get install libopenblas-base libopenmpi-dev libomp-dev
-sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev 
-sudo apt-get install libopenblas-dev libavcodec-dev libavformat-dev 
-sudo apt-get install libswscale-dev
+sudo apt-get install python3-sklearn python3-sklearn-lib -y
+sudo apt-get install python3-skimage python3-skimage-lib -y
+sudo apt-get install libopenblas-base libopenmpi-dev libomp-dev -y
+sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev -y
+sudo apt-get install libopenblas-dev libavcodec-dev libavformat-dev -y 
+sudo apt-get install libswscale-dev -y
 
 # Install pytorch
 #  https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048
@@ -27,6 +29,10 @@ cd Torch
 
 python3 -m pip install 'Cython<3'
 # Successfully installed Cython-0.29.37
+
+# tqdm tool
+python3 -m pip install tqdm
+# Successfully installed importlib-resources-5.4.0 tqdm-4.64.1 zipp-3.6.0
 
 wget https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl -O  torch-1.10.0-cp36-cp36m-linux_aarch64.whl
 # Could also use:
@@ -81,29 +87,33 @@ python3 setup.py install --user
 cd   # loading torchvision from build dir will result in import error
 #python3 -m pip install 'pillow<7' # always needed for Python 2.7, not needed torchvision v0.5.0+ with Python 3.6
 
-python3
->>> import cv2
->>> cv2.__version__
-'4.1.1'
->>> import numpy
->>> numpy.__version__
-'1.13.3'
->>> import PIL
->>> PIL.__version__
-'8.4.0'
->>> import sklearn
->>> sklearn.__version__
-'0.19.1'
->>> import skimage
->>> skimage.__version__
-'0.13.1'
->>> import torch
->>> torch.__version__
-'1.8.0'
->>> import torchvision
->>> torchvision.__version__
-'0.9.0'
+# python3
+# >>> import cv2
+# >>> cv2.__version__
+# '4.1.1'
+# >>> import numpy
+# >>> numpy.__version__
+# '1.13.3'
+# >>> import PIL
+# >>> PIL.__version__
+# '8.4.0'
+# >>> import sklearn
+# >>> sklearn.__version__
+# '0.19.1'
+# >>> import skimage
+# >>> skimage.__version__
+# '0.13.1'
+# >>> import torch
+# >>> torch.__version__
+# '1.8.0'
+# >>> import torchvision
+# >>> torchvision.__version__
+# '0.9.0'
+
+# Python versions
+python3 -c 'import cv2;print(f"cv2: {cv2.__version__}");import numpy;print(f"numpy: {numpy.__version__}");import PIL;print(f"PIL: {PIL.__version__}");import sklearn;print(f"sklearn: {sklearn.__version__}");import skimage;print(f"skimage: {skimage.__version__}");import torch;print(f"torch: {torch.__version__}");import torchvision;print(f"torchvision: {torchvision.__version__}");'
 
 # How to get the system path to pytorch liraries
 python3 -c 'import torch;print(torch.utils.cmake_prefix_path)'
 # /home/ubuntu/.local/lib/python3.6/site-packages/torch/share/cmake
+
