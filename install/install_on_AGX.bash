@@ -34,9 +34,9 @@ python3 -m pip install 'Cython<3'
 python3 -m pip install tqdm
 # Successfully installed importlib-resources-5.4.0 tqdm-4.64.1 zipp-3.6.0
 
-wget https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl -O  torch-1.10.0-cp36-cp36m-linux_aarch64.whl
+# wget https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl -O  torch-1.10.0-cp36-cp36m-linux_aarch64.whl
 # Could also use:
-# sudo gsutil cp gs://anantak-ups/Production/VGV/2.8.1/torch-1.10.0-cp36-cp36m-linux_aarch64.whl .
+sudo gsutil cp gs://anantak-ups/Production/VGV/2.8.1/torch-1.10.0-cp36-cp36m-linux_aarch64.whl .
 python3 -m pip install torch-1.10.0-cp36-cp36m-linux_aarch64.whl
 
 # Requirement already satisfied: dataclasses in /home/ubuntu/.local/lib/python3.6/site-packages (from torch==1.10.0) (0.8)
@@ -45,9 +45,12 @@ python3 -m pip install torch-1.10.0-cp36-cp36m-linux_aarch64.whl
 # Successfully installed torch-1.8.0 typing-extensions-4.1.1
 
 # torch vision
-git clone --branch v0.9.0 https://github.com/pytorch/vision torchvision
+# git clone --branch v0.9.0 https://github.com/pytorch/vision torchvision
 # Could also use:
-# sudo gsutil cp gs://anantak-ups/Production/VGV/2.8.1/torch-vision-0.9.0.zip .
+sudo gsutil cp gs://anantak-ups/Production/VGV/2.8.1/torch-vision-0.9.0.zip .
+sudo chmod 777 ./torch-vision-0.9.0.zip
+unzip ./torch-vision-0.9.0.zip
+mv ./vision-0.9.0 torchvision
 export BUILD_VERSION=0.9.0
 export OPENBLAS_CORETYPE=ARMV8
 cd torchvision
