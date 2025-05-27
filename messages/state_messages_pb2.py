@@ -11,6 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+import machine_messages_pb2 as machine__messages__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,8 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x14state_messages.proto\x12\x0f\x61nantak.message\"H\n\x10PoseStateMessage\x12\r\n\x05state\x18\x01 \x03(\x01\x12\x12\n\ncovariance\x18\x03 \x03(\x01\x12\x11\n\torigin_id\x18\x05 \x01(\t\"\xf3\t\n\x15PoseTrajectoryMessage\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x30\n\x05poses\x18\x02 \x03(\x0b\x32!.anantak.message.PoseStateMessage\x12\x12\n\ntimestamps\x18\x03 \x03(\x03\x12\x11\n\ttarget_id\x18\x05 \x01(\t\x12\x19\n\x11sensor_0_readings\x18\n \x03(\x02\x12\x1b\n\x13sensor_0_timestamps\x18\x0b \x03(\x03\x12\x1c\n\x14sensor_0_calibration\x18\x0c \x03(\x02\x12\x19\n\x11sensor_1_readings\x18\x14 \x03(\x02\x12\x1b\n\x13sensor_1_timestamps\x18\x15 \x03(\x03\x12\x1c\n\x14sensor_1_calibration\x18\x16 \x03(\x02\x12\x19\n\x11sensor_2_readings\x18\x1e \x03(\x02\x12\x1b\n\x13sensor_2_timestamps\x18\x1f \x03(\x03\x12\x1c\n\x14sensor_2_calibration\x18  \x03(\x02\x12\x19\n\x10lidar_0_readings\x18\x8c\x01 \x03(\x02\x12\x1b\n\x12lidar_0_timestamps\x18\x8d\x01 \x03(\x03\x12\x1c\n\x13lidar_0_calibration\x18\x8e\x01 \x03(\x02\x12\x19\n\x10lidar_1_readings\x18\x8f\x01 \x03(\x02\x12\x1b\n\x12lidar_1_timestamps\x18\x90\x01 \x03(\x03\x12\x1c\n\x13lidar_1_calibration\x18\x91\x01 \x03(\x02\x12\x19\n\x10lidar_2_readings\x18\x92\x01 \x03(\x02\x12\x1b\n\x12lidar_2_timestamps\x18\x93\x01 \x03(\x03\x12\x1c\n\x13lidar_2_calibration\x18\x94\x01 \x03(\x02\x12\x19\n\x10lidar_3_readings\x18\x95\x01 \x03(\x02\x12\x1b\n\x12lidar_3_timestamps\x18\x96\x01 \x03(\x03\x12\x1c\n\x13lidar_3_calibration\x18\x97\x01 \x03(\x02\x12\x13\n\x0b\x61uto_manual\x18\x33 \x01(\x08\x12\x12\n\nkey_on_off\x18\x34 \x01(\x08\x12\x12\n\ngoing_slow\x18\x35 \x01(\x08\x12\x17\n\x0fpath_is_blocked\x18\x36 \x01(\x08\x12 \n\x18inner_ellipse_is_blocked\x18\x37 \x01(\x08\x12 \n\x18outer_ellipse_is_blocked\x18\x38 \x01(\x08\x12\x15\n\rinstant_speed\x18\x39 \x01(\x02\x12\x14\n\x0ctarget_speed\x18: \x01(\x02\x12\x17\n\x0f\x62\x61ttery_voltage\x18; \x01(\x02\x12\x17\n\x0f\x62\x61ttery_current\x18< \x01(\x02\x12\x18\n\x10\x63onsumed_current\x18= \x01(\x02\x12\x16\n\x0esteering_angle\x18> \x01(\x02\x12\x1b\n\x13machine_is_charging\x18? \x01(\x08\x12\x1f\n\x17is_in_move_forward_mode\x18G \x01(\x08\x12\x1b\n\x13is_in_movement_mode\x18H \x01(\x08\x12!\n\x19is_in_remote_control_mode\x18I \x01(\x08\x12\x15\n\rlive_odometer\x18P \x01(\x02\x12\x16\n\x0etoday_odometer\x18Q \x01(\x02\x12\x17\n\x0f\x64isplay_message\x18Z \x01(\t\x12(\n local_planner_mission_plan_state\x18\x65 \x01(\x05\"/\n\x0ePostureMessage\x12\x0c\n\x04type\x18\x01 \x02(\t\x12\x0f\n\x07posture\x18\x02 \x03(\x01\"\xf8\x01\n\x10\x46reespaceMessage\x12\x0e\n\x06\x61ngle0\x18\x02 \x03(\x02\x12\x0e\n\x06\x61ngle1\x18\x03 \x03(\x02\x12\x0f\n\x07lengths\x18\x05 \x03(\x02\x12\x0f\n\x07height0\x18\x06 \x03(\x02\x12\x0f\n\x07height1\x18\x07 \x03(\x02\x12\x0f\n\x07\x63lasses\x18\x08 \x03(\x05\x12\x13\n\x0brear_angle0\x18\x0c \x03(\x02\x12\x13\n\x0brear_angle1\x18\r \x03(\x02\x12\x14\n\x0crear_lengths\x18\x0f \x03(\x02\x12\x14\n\x0crear_height0\x18\x10 \x03(\x02\x12\x14\n\x0crear_height1\x18\x11 \x03(\x02\x12\x14\n\x0crear_classes\x18\x12 \x03(\x05\"\xde\x05\n\x0fLightingMessage\x12\x0e\n\x06source\x18\x02 \x02(\t\x12\r\n\x05shape\x18\x03 \x02(\t\x12\x0e\n\x06params\x18\x04 \x03(\x02\x12\r\n\x05\x63olor\x18\x05 \x03(\x02\x12\x12\n\nbrightness\x18\x06 \x01(\x02\x12\x0c\n\x04text\x18\x07 \x01(\t\x12\x11\n\ttextcolor\x18\x08 \x03(\x02\x12\x13\n\x0btextbgcolor\x18\t \x03(\x02\x12\x11\n\tsub_shape\x18\x14 \x02(\t\x12\x12\n\nsub_params\x18\x15 \x03(\x02\x12\x11\n\tsub_color\x18\x16 \x03(\x02\x12\x17\n\x0f\x62\x61ttery_voltage\x18\x65 \x01(\x02\x12\x17\n\x0f\x62\x61ttery_current\x18\x66 \x01(\x02\x12\x13\n\x0bis_charging\x18g \x01(\x08\x12\x15\n\ris_plugged_in\x18h \x01(\x08\x12\x19\n\x11num_error_cameras\x18i \x01(\x05\x12\x18\n\x10num_error_lidars\x18j \x01(\x05\x12\x18\n\x0f\x63ontroller_mode\x18\x97\x01 \x01(\x05\x12\x19\n\x10\x63ontroller_event\x18\x98\x01 \x01(\t\x12\x19\n\x10\x63ontroller_error\x18\x99\x01 \x01(\x05\x12\x15\n\x0croute_status\x18\x9a\x01 \x01(\t\x12\x16\n\rnum_waypoints\x18\x9b\x01 \x01(\x05\x12\x18\n\x0fis_dropping_off\x18\x9c\x01 \x01(\x08\x12\x19\n\x10is_lidar_blocked\x18\x9d\x01 \x01(\x08\x12\x1c\n\x13is_on_parallel_path\x18\x9e\x01 \x01(\x08\x12\x1b\n\x12is_something_close\x18\x9f\x01 \x01(\x08\x12\x17\n\x0eis_lost_on_map\x18\xa0\x01 \x01(\x08\x12\x1a\n\x11is_line_following\x18\xa1\x01 \x01(\x08\x12\x1b\n\x12is_not_able_to_see\x18\xa2\x01 \x01(\x08\x12\x18\n\x0fmsg_client_type\x18\xc8\x01 \x01(\x05\x12\x1b\n\x12\x66ull_light_message\x18\xc9\x01 \x01(\t\"\x9b\x0e\n\x0cRouteMessage\x12\x0e\n\x06status\x18\x01 \x01(\t\x12\x10\n\x08\x66rame_id\x18\x04 \x01(\t\x12\x10\n\x08route_id\x18\x05 \x01(\t\x12\x13\n\x0bwaypoint_id\x18\x06 \x01(\x05\x12\x12\n\nat_station\x18\n \x01(\t\x12\x14\n\x0cnext_station\x18\x0b \x01(\t\x12\x13\n\x0bnext_marker\x18\x0c \x01(\t\x12\x1d\n\x15next_station_distance\x18\r \x01(\x05\x12\x1c\n\x14next_marker_distance\x18\x0e \x01(\x05\x12\x15\n\rnext_stations\x18\x0f \x03(\t\x12\x12\n\nodometries\x18\x10 \x03(\x02\x12\x0e\n\x06\x61\x63tion\x18\x14 \x01(\t\x12\x1a\n\x12localization_delay\x18\x1e \x01(\x03\x12\x18\n\x10localization_num\x18\x1f \x01(\x05\x12\x1d\n\x15localization_distance\x18  \x01(\x02\x12\x1c\n\x14localization_inliers\x18! \x01(\x03\x12\"\n\x1alocalization_lidar3d_score\x18\" \x01(\x03\x12\x1a\n\x12ground_lines_delay\x18( \x01(\x03\x12\x18\n\x10ground_lines_num\x18) \x01(\x05\x12\x1d\n\x15ground_lines_distance\x18* \x01(\x05\x12\x1d\n\x15lidar3d_scan_delay_ms\x18\x32 \x01(\x03\x12 \n\x18lidar3d_scan_interval_ms\x18\x33 \x01(\x03\x12\x15\n\rlearn_map_num\x18+ \x01(\x05\x12\x15\n\rnum_rigframes\x18, \x01(\x05\x12\x15\n\rnum_keypoints\x18- \x01(\x05\x12\x15\n\rsaved_map_num\x18. \x01(\x05\x12\x19\n\x11lights_brightness\x18\x64 \x01(\x02\x12\x1c\n\x14num_occluded_cameras\x18n \x01(\x05\x12\x1a\n\x11localized_map_num\x18\xc8\x01 \x01(\x05\x12#\n\x1alocalized_map_rigframe_num\x18\xc9\x01 \x01(\x05\x12)\n localized_map_route_segment_info\x18\xca\x01 \x01(\t\x12\x18\n\x0flive_map_rf_num\x18\xcb\x01 \x01(\x05\x12\x1d\n\x14localization_age_sec\x18\xcc\x01 \x01(\x03\x12\x1f\n\x16transition_map_numbers\x18\xac\x02 \x03(\x05\x12&\n\x1dunified_sitemap_location_name\x18\xbd\x05 \x01(\t\x12\x1d\n\x14unified_sitemap_pose\x18\xbe\x05 \x03(\x02\x12#\n\x1aunified_sitemap_image_pose\x18\xbf\x05 \x03(\x02\x12#\n\x1amission_planner_mission_id\x18\x84\x07 \x01(\x05\x12!\n\x18mission_planner_state_id\x18\x85\x07 \x01(\x05\x12/\n&mission_planner_distance_from_target_m\x18\x86\x07 \x01(\x02\x12.\n%mission_planner_angle_from_target_rad\x18\x87\x07 \x01(\x02\x12(\n\x1fmission_planner_target_location\x18\x88\x07 \x01(\t\x12,\n#mission_planner_target_sub_location\x18\x89\x07 \x01(\t\x12(\n\x1fmission_planner_target_map_pose\x18\x8a\x07 \x03(\x02\x12\x39\n0mission_planner_trajectory_generation_directions\x18\x8b\x07 \x01(\t\x12\x30\n\'mission_planner_target_detection_status\x18\x98\x07 \x01(\t\x12,\n#mission_planner_target_detection_ts\x18\x99\x07 \x01(\x03\x12-\n$mission_planner_target_detected_pose\x18\x9a\x07 \x03(\x02\x12<\n3mission_planner_target_detection_instantaneous_pose\x18\x9b\x07 \x03(\x02\x12\x1e\n\x15\x65nvironment_tag_names\x18\xf2\x07 \x03(\t\x12\"\n\x19\x65nvironment_tag_rig_poses\x18\xf3\x07 \x03(\x02\x12.\n%environment_tag_unified_sitemap_poses\x18\xf4\x07 \x03(\x02\x12\x18\n\x0fwifi_ip_address\x18\xcc\x08 \x01(\t\x12\x19\n\x10wifi_mac_address\x18\xcd\x08 \x01(\t\x12\x1c\n\x13\x65thernet_ip_address\x18\xd6\x08 \x01(\t\x12\x1d\n\x14\x65thernet_mac_address\x18\xd7\x08 \x01(\t\"?\n\x12LineSegmentMessage\x12\n\n\x02v0\x18\x01 \x03(\x02\x12\n\n\x02v1\x18\x02 \x03(\x02\x12\x11\n\torigin_id\x18\x05 \x01(\t\"~\n\x13LineSegmentsMessage\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x32\n\x05lines\x18\x02 \x03(\x0b\x32#.anantak.message.LineSegmentMessage\x12\x12\n\ntimestamps\x18\x03 \x03(\x03\x12\x11\n\ttarget_id\x18\x05 \x01(\t\"-\n\x0cPointMessage\x12\n\n\x02v0\x18\x01 \x03(\x02\x12\x11\n\torigin_id\x18\x05 \x01(\t\"s\n\rPointsMessage\x12\x0c\n\x04type\x18\x01 \x01(\t\x12-\n\x06points\x18\x02 \x03(\x0b\x32\x1d.anantak.message.PointMessage\x12\x12\n\ntimestamps\x18\x03 \x03(\x03\x12\x11\n\ttarget_id\x18\x05 \x01(\t\"\x8c\x01\n\rBeaconMessage\x12\x0e\n\x06ranges\x18\x02 \x03(\x01\x12\x0b\n\x03imu\x18\x03 \x03(\x01\x12\x10\n\x08magnetic\x18\x04 \x03(\x01\x12\x14\n\x0crange_stdevs\x18\x05 \x03(\x01\x12\x10\n\x08position\x18\x06 \x03(\x01\x12\x16\n\x0eposition_stdev\x18\x07 \x03(\x01\x12\x0c\n\x04\x63ode\x18\x08 \x03(\x03\"\x92\x02\n\x0bWiFiMessage\x12\x0c\n\x04ssid\x18\x02 \x01(\t\x12\x11\n\twifi_mode\x18\x03 \x01(\t\x12\x16\n\x0e\x61p_mac_address\x18\x04 \x01(\t\x12\x18\n\x10inactive_time_ms\x18\x05 \x01(\r\x12\x19\n\x11\x63onnected_time_ms\x18\x06 \x01(\r\x12\x1e\n\x16signal_quality_percent\x18\x07 \x01(\x01\x12\x14\n\x0csignal_level\x18\x08 \x01(\x05\x12\x0f\n\x07\x62\x65\x61\x63ons\x18\t \x01(\x04\x12\x13\n\x0b\x62\x65\x61\x63on_loss\x18\n \x01(\r\x12\x11\n\tfrequency\x18\x0b \x01(\x05\x12\x0f\n\x07\x63hannel\x18\x0c \x01(\x05\x12\x15\n\rchannel_width\x18\r \x01(\t\"\xb9\x02\n\x0fSteeringMessage\x12\x18\n\x10motor_is_engaged\x18\n \x01(\x05\x12\x1c\n\x14\x63ontrol_target_angle\x18\x14 \x01(\x02\x12\x19\n\x11motor_status_word\x18\x1e \x01(\x05\x12\x1a\n\x12motor_target_angle\x18\x1f \x01(\x02\x12\x1b\n\x13motor_current_angle\x18  \x01(\x02\x12\x1d\n\x15motor_target_velocity\x18! \x01(\x02\x12\x1e\n\x16motor_current_velocity\x18\" \x01(\x02\x12\x1a\n\x12motor_target_accel\x18# \x01(\x02\x12\x1a\n\x12motor_target_decel\x18$ \x01(\x02\x12\x0f\n\x07\x63ommand\x18\x32 \x01(\t\x12\x12\n\nerror_code\x18\x64 \x01(\x05\"H\n\x1bTractionMotorEncoderMessage\x12\x15\n\rticks_per_sec\x18\n \x01(\x02\x12\x12\n\nerror_code\x18\x64 \x01(\x05\"\xdb\x0e\n\x13MachineStateStorage\x12\x1f\n\x17\x61lgorithm_cycle_time_ms\x18\x01 \x01(\x02\x12\x1f\n\x17rendering_cycle_time_ms\x18\x02 \x01(\x02\x12\x15\n\rcurrent_ts_us\x18\x14 \x01(\x03\x12\x14\n\x0csensor_ts_us\x18\x15 \x03(\x03\x12\x14\n\x0cmachine_name\x18\x32 \x01(\t\x12\x1a\n\x12localization_state\x18\x65 \x01(\t\x12\x14\n\x0c\x63\x61mera_score\x18\x66 \x01(\x02\x12\x13\n\x0bscans_score\x18g \x01(\x02\x12\x16\n\x0e\x63\x61mera_inliers\x18h \x03(\x05\x12!\n\x19\x63\x61mera_location_map_frame\x18i \x01(\x05\x12 \n\x18scans_location_map_frame\x18j \x01(\x05\x12\x14\n\x0csitemap_pose\x18k \x03(\x02\x12\x10\n\x08route_id\x18l \x01(\t\x12\x1f\n\x17relocalization_location\x18y \x01(\x05\x12!\n\x19time_since_last_attempt_s\x18z \x01(\x05\x12\x32\n*last_lidar_relocalization_attempt_location\x18{ \x01(\x05\x12!\n\x19time_since_last_success_s\x18| \x01(\x05\x12\x32\n*last_lidar_relocalization_success_location\x18} \x01(\x05\x12)\n!last_lidar_relocalization_message\x18~ \x01(\t\x12\x10\n\x07zone_id\x18\xc9\x01 \x01(\x05\x12\x1f\n\x16places_scans_threshold\x18\xca\x01 \x01(\x02\x12\x11\n\x08zone_id2\x18\xcb\x01 \x01(\x05\x12 \n\x17places_scans_threshold2\x18\xcc\x01 \x01(\x02\x12#\n\x1aneeds_to_auto_stop_in_zone\x18\xdd\x01 \x01(\x08\x12)\n needs_to_clear_auto_stop_in_zone\x18\xde\x01 \x01(\x08\x12\x1c\n\x13\x61uto_stop_zone_name\x18\xdf\x01 \x01(\t\x12\x1d\n\x14\x61uto_stop_zone_state\x18\xe0\x01 \x01(\t\x12\x14\n\x0b\x61uto_manual\x18\xad\x02 \x01(\x05\x12\x12\n\tkey_state\x18\xae\x02 \x01(\x05\x12\x1d\n\x14safety_ellipse_state\x18\xaf\x02 \x01(\x05\x12\x13\n\nodometries\x18\xb0\x02 \x03(\x02\x12\x17\n\x0etire_0_reading\x18\xb6\x02 \x01(\x02\x12\x17\n\x0etire_1_reading\x18\xc0\x02 \x01(\x02\x12\x16\n\rsteer_reading\x18\xca\x02 \x01(\x02\x12\x16\n\rinstant_speed\x18\xe5\x02 \x01(\x02\x12\x15\n\x0ctarget_speed\x18\xe6\x02 \x01(\x02\x12\x18\n\x0f\x62\x61ttery_voltage\x18\xe7\x02 \x01(\x02\x12\x18\n\x0f\x62\x61ttery_current\x18\xe8\x02 \x01(\x02\x12\x19\n\x10\x63onsumed_current\x18\xe9\x02 \x01(\x02\x12\x17\n\x0esteering_angle\x18\xea\x02 \x01(\x02\x12\x18\n\x0f\x64isplay_message\x18\x86\x03 \x01(\t\x12\x17\n\x0e\x64isplay_lights\x18\x87\x03 \x01(\t\x12\x18\n\x0freached_station\x18\x91\x03 \x01(\t\x12\x15\n\x0cnext_station\x18\x92\x03 \x01(\t\x12!\n\x18\x64istance_to_next_station\x18\x93\x03 \x01(\x02\x12\x14\n\x0broute_state\x18\x94\x03 \x01(\t\x12\x1b\n\x12trip_stations_list\x18\x95\x03 \x03(\t\x12\x1d\n\x14last_command_ago_sec\x18\xf5\x03 \x01(\x05\x12\x15\n\x0clast_command\x18\xf6\x03 \x01(\t\x12!\n\x18last_command_client_type\x18\xf7\x03 \x01(\x05\x12\x12\n\twifi_ssid\x18\xda\x04 \x01(\t\x12\x12\n\twifi_mode\x18\xdb\x04 \x01(\t\x12\x1c\n\x13wifi_ap_mac_address\x18\xdc\x04 \x01(\t\x12\x1e\n\x15wifi_inactive_time_ms\x18\xdd\x04 \x01(\r\x12\x1f\n\x16wifi_connected_time_ms\x18\xde\x04 \x01(\r\x12$\n\x1bwifi_signal_quality_percent\x18\xdf\x04 \x01(\x01\x12\x1a\n\x11wifi_signal_level\x18\xe0\x04 \x01(\x05\x12\x15\n\x0cwifi_beacons\x18\xe1\x04 \x01(\x04\x12\x19\n\x10wifi_beacon_loss\x18\xe2\x04 \x01(\r\x12\x17\n\x0ewifi_frequency\x18\xe3\x04 \x01(\x05\x12\x15\n\x0cwifi_channel\x18\xe4\x04 \x01(\x05\x12\x1b\n\x12wifi_channel_width\x18\xe5\x04 \x01(\t\x12&\n\x1dunified_sitemap_location_name\x18\xbd\x05 \x01(\t\x12\x1d\n\x14unified_sitemap_pose\x18\xbe\x05 \x03(\x02\x12#\n\x1aunified_sitemap_image_pose\x18\xbf\x05 \x03(\x02\"f\n\x1bMachineStateStorageDatabase\x12G\n\x19machine_state_storage_msg\x18\x01 \x03(\x0b\x32$.anantak.message.MachineStateStorage\"\x96\x03\n\x0fReporterMessage\x12\x11\n\tunique_id\x18\n \x01(\t\x12\x12\n\nowner_name\x18\x0b \x01(\t\x12\x10\n\x08severity\x18\x0c \x01(\x05\x12\x0f\n\x07message\x18\r \x01(\t\x12\x0e\n\x06\x66ormat\x18\x0e \x01(\t\x12\x19\n\x11last_timestamp_us\x18\x0f \x01(\x03\x12\x13\n\x0bsource_func\x18\x10 \x01(\t\x12\x17\n\x0fsource_filename\x18\x11 \x01(\t\x12\x17\n\x0fsource_line_num\x18\x12 \x01(\x05\x12\x13\n\x0blifespan_ms\x18\x14 \x01(\x05\x12\x1b\n\x13publish_interval_us\x18\x15 \x01(\x03\x12\x0f\n\x07user_id\x18\x1e \x01(\t\x12\x18\n\x10user_description\x18\x1f \x01(\t\x12\x15\n\ruser_category\x18  \x01(\t\x12\x14\n\x0cuser_command\x18! \x01(\t\x12\x11\n\tuser_link\x18\" \x01(\t\x12\x13\n\x0buser_status\x18# \x01(\t\x12\x15\n\ruser_priority\x18$ \x01(\x05\"O\n\x10ReporterDatabase\x12;\n\x11reporter_messages\x18\x01 \x03(\x0b\x32 .anantak.message.ReporterMessage'
-)
+  serialized_pb=b'\n\x14state_messages.proto\x12\x0f\x61nantak.message\x1a\x16machine_messages.proto\"H\n\x10PoseStateMessage\x12\r\n\x05state\x18\x01 \x03(\x01\x12\x12\n\ncovariance\x18\x03 \x03(\x01\x12\x11\n\torigin_id\x18\x05 \x01(\t\"\xc5\n\n\x15PoseTrajectoryMessage\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x30\n\x05poses\x18\x02 \x03(\x0b\x32!.anantak.message.PoseStateMessage\x12\x12\n\ntimestamps\x18\x03 \x03(\x03\x12\x11\n\ttarget_id\x18\x05 \x01(\t\x12\x19\n\x11sensor_0_readings\x18\n \x03(\x02\x12\x1b\n\x13sensor_0_timestamps\x18\x0b \x03(\x03\x12\x1c\n\x14sensor_0_calibration\x18\x0c \x03(\x02\x12\x19\n\x11sensor_1_readings\x18\x14 \x03(\x02\x12\x1b\n\x13sensor_1_timestamps\x18\x15 \x03(\x03\x12\x1c\n\x14sensor_1_calibration\x18\x16 \x03(\x02\x12\x19\n\x11sensor_2_readings\x18\x1e \x03(\x02\x12\x1b\n\x13sensor_2_timestamps\x18\x1f \x03(\x03\x12\x1c\n\x14sensor_2_calibration\x18  \x03(\x02\x12\x19\n\x10lidar_0_readings\x18\x8c\x01 \x03(\x02\x12\x1b\n\x12lidar_0_timestamps\x18\x8d\x01 \x03(\x03\x12\x1c\n\x13lidar_0_calibration\x18\x8e\x01 \x03(\x02\x12\x19\n\x10lidar_1_readings\x18\x8f\x01 \x03(\x02\x12\x1b\n\x12lidar_1_timestamps\x18\x90\x01 \x03(\x03\x12\x1c\n\x13lidar_1_calibration\x18\x91\x01 \x03(\x02\x12\x19\n\x10lidar_2_readings\x18\x92\x01 \x03(\x02\x12\x1b\n\x12lidar_2_timestamps\x18\x93\x01 \x03(\x03\x12\x1c\n\x13lidar_2_calibration\x18\x94\x01 \x03(\x02\x12\x19\n\x10lidar_3_readings\x18\x95\x01 \x03(\x02\x12\x1b\n\x12lidar_3_timestamps\x18\x96\x01 \x03(\x03\x12\x1c\n\x13lidar_3_calibration\x18\x97\x01 \x03(\x02\x12\x13\n\x0b\x61uto_manual\x18\x33 \x01(\x08\x12\x12\n\nkey_on_off\x18\x34 \x01(\x08\x12\x12\n\ngoing_slow\x18\x35 \x01(\x08\x12\x17\n\x0fpath_is_blocked\x18\x36 \x01(\x08\x12 \n\x18inner_ellipse_is_blocked\x18\x37 \x01(\x08\x12 \n\x18outer_ellipse_is_blocked\x18\x38 \x01(\x08\x12\x15\n\rinstant_speed\x18\x39 \x01(\x02\x12\x14\n\x0ctarget_speed\x18: \x01(\x02\x12\x17\n\x0f\x62\x61ttery_voltage\x18; \x01(\x02\x12\x17\n\x0f\x62\x61ttery_current\x18< \x01(\x02\x12\x18\n\x10\x63onsumed_current\x18= \x01(\x02\x12\x16\n\x0esteering_angle\x18> \x01(\x02\x12\x1b\n\x13machine_is_charging\x18? \x01(\x08\x12\x1f\n\x17is_in_move_forward_mode\x18G \x01(\x08\x12\x1b\n\x13is_in_movement_mode\x18H \x01(\x08\x12!\n\x19is_in_remote_control_mode\x18I \x01(\x08\x12\x15\n\rlive_odometer\x18P \x01(\x02\x12\x16\n\x0etoday_odometer\x18Q \x01(\x02\x12\x17\n\x0f\x64isplay_message\x18Z \x01(\t\x12(\n local_planner_mission_plan_state\x18\x65 \x01(\x05\x12 \n\x17permissive_time_left_ms\x18\xe9\x07 \x01(\x03\x12.\n%post_blockage_permissive_time_left_ms\x18\xea\x07 \x01(\x03\"/\n\x0ePostureMessage\x12\x0c\n\x04type\x18\x01 \x02(\t\x12\x0f\n\x07posture\x18\x02 \x03(\x01\"\xf8\x01\n\x10\x46reespaceMessage\x12\x0e\n\x06\x61ngle0\x18\x02 \x03(\x02\x12\x0e\n\x06\x61ngle1\x18\x03 \x03(\x02\x12\x0f\n\x07lengths\x18\x05 \x03(\x02\x12\x0f\n\x07height0\x18\x06 \x03(\x02\x12\x0f\n\x07height1\x18\x07 \x03(\x02\x12\x0f\n\x07\x63lasses\x18\x08 \x03(\x05\x12\x13\n\x0brear_angle0\x18\x0c \x03(\x02\x12\x13\n\x0brear_angle1\x18\r \x03(\x02\x12\x14\n\x0crear_lengths\x18\x0f \x03(\x02\x12\x14\n\x0crear_height0\x18\x10 \x03(\x02\x12\x14\n\x0crear_height1\x18\x11 \x03(\x02\x12\x14\n\x0crear_classes\x18\x12 \x03(\x05\"\xef\x08\n\x0fLightingMessage\x12\x0e\n\x06source\x18\x02 \x02(\t\x12\r\n\x05shape\x18\x03 \x02(\t\x12\x0e\n\x06params\x18\x04 \x03(\x02\x12\r\n\x05\x63olor\x18\x05 \x03(\x02\x12\x12\n\nbrightness\x18\x06 \x01(\x02\x12\x0c\n\x04text\x18\x07 \x01(\t\x12\x11\n\ttextcolor\x18\x08 \x03(\x02\x12\x13\n\x0btextbgcolor\x18\t \x03(\x02\x12\x11\n\tsub_shape\x18\x14 \x02(\t\x12\x12\n\nsub_params\x18\x15 \x03(\x02\x12\x11\n\tsub_color\x18\x16 \x03(\x02\x12\x17\n\x0f\x62\x61ttery_voltage\x18\x65 \x01(\x02\x12\x17\n\x0f\x62\x61ttery_current\x18\x66 \x01(\x02\x12\x13\n\x0bis_charging\x18g \x01(\x08\x12\x15\n\ris_plugged_in\x18h \x01(\x08\x12\x19\n\x11num_error_cameras\x18i \x01(\x05\x12\x18\n\x10num_error_lidars\x18j \x01(\x05\x12\x18\n\x0f\x63ontroller_mode\x18\x97\x01 \x01(\x05\x12\x19\n\x10\x63ontroller_event\x18\x98\x01 \x01(\t\x12\x19\n\x10\x63ontroller_error\x18\x99\x01 \x01(\x05\x12\x15\n\x0croute_status\x18\x9a\x01 \x01(\t\x12\x16\n\rnum_waypoints\x18\x9b\x01 \x01(\x05\x12\x18\n\x0fis_dropping_off\x18\x9c\x01 \x01(\x08\x12\x19\n\x10is_lidar_blocked\x18\x9d\x01 \x01(\x08\x12\x1c\n\x13is_on_parallel_path\x18\x9e\x01 \x01(\x08\x12\x1b\n\x12is_something_close\x18\x9f\x01 \x01(\x08\x12\x17\n\x0eis_lost_on_map\x18\xa0\x01 \x01(\x08\x12\x1a\n\x11is_line_following\x18\xa1\x01 \x01(\x08\x12\x1b\n\x12is_not_able_to_see\x18\xa2\x01 \x01(\x08\x12\x18\n\x0fmsg_client_type\x18\xc8\x01 \x01(\x05\x12\x1b\n\x12\x66ull_light_message\x18\xc9\x01 \x01(\t\x12\x19\n\x10is_estop_pressed\x18\xa3\x01 \x01(\x08\x12\x1a\n\x11is_key_switch_off\x18\xa4\x01 \x01(\x08\x12\'\n\x1eis_in_permissive_starting_mode\x18\xa5\x01 \x01(\x08\x12 \n\x17is_in_move_forward_mode\x18\xa6\x01 \x01(\x08\x12*\n!move_forward_remaining_distance_m\x18\xa7\x01 \x01(\x02\x12\x16\n\ris_localizing\x18\xa8\x01 \x01(\x08\x12\x1a\n\x11localizing_status\x18\xa9\x01 \x03(\t\x12\x16\n\rnext_stations\x18\xac\x02 \x03(\t\x12 \n\x17next_station_distance_m\x18\xad\x02 \x01(\x02\x12\x17\n\x0elights_command\x18\x90\x03 \x01(\t\x12\x1d\n\x14lights_command_param\x18\x91\x03 \x01(\t\x12\x1b\n\x12waiting_for_reason\x18\xf4\x03 \x01(\t\x12\x1e\n\x15waiting_for_parameter\x18\xf5\x03 \x01(\t\"\xcd\x0e\n\x0cRouteMessage\x12\x0e\n\x06status\x18\x01 \x01(\t\x12\x10\n\x08\x66rame_id\x18\x04 \x01(\t\x12\x10\n\x08route_id\x18\x05 \x01(\t\x12\x13\n\x0bwaypoint_id\x18\x06 \x01(\x05\x12\x12\n\nat_station\x18\n \x01(\t\x12\x14\n\x0cnext_station\x18\x0b \x01(\t\x12\x13\n\x0bnext_marker\x18\x0c \x01(\t\x12\x1d\n\x15next_station_distance\x18\r \x01(\x05\x12\x1c\n\x14next_marker_distance\x18\x0e \x01(\x05\x12\x15\n\rnext_stations\x18\x0f \x03(\t\x12\x12\n\nodometries\x18\x10 \x03(\x02\x12\x0e\n\x06\x61\x63tion\x18\x14 \x01(\t\x12\x1a\n\x12localization_delay\x18\x1e \x01(\x03\x12\x18\n\x10localization_num\x18\x1f \x01(\x05\x12\x1d\n\x15localization_distance\x18  \x01(\x02\x12\x1c\n\x14localization_inliers\x18! \x01(\x03\x12\"\n\x1alocalization_lidar3d_score\x18\" \x01(\x03\x12\x15\n\ris_localizing\x18# \x01(\x08\x12\x19\n\x11localizing_status\x18$ \x03(\t\x12\x1a\n\x12ground_lines_delay\x18( \x01(\x03\x12\x18\n\x10ground_lines_num\x18) \x01(\x05\x12\x1d\n\x15ground_lines_distance\x18* \x01(\x05\x12\x1d\n\x15lidar3d_scan_delay_ms\x18\x32 \x01(\x03\x12 \n\x18lidar3d_scan_interval_ms\x18\x33 \x01(\x03\x12\x15\n\rlearn_map_num\x18+ \x01(\x05\x12\x15\n\rnum_rigframes\x18, \x01(\x05\x12\x15\n\rnum_keypoints\x18- \x01(\x05\x12\x15\n\rsaved_map_num\x18. \x01(\x05\x12\x19\n\x11lights_brightness\x18\x64 \x01(\x02\x12\x1c\n\x14num_occluded_cameras\x18n \x01(\x05\x12\x1a\n\x11localized_map_num\x18\xc8\x01 \x01(\x05\x12#\n\x1alocalized_map_rigframe_num\x18\xc9\x01 \x01(\x05\x12)\n localized_map_route_segment_info\x18\xca\x01 \x01(\t\x12\x18\n\x0flive_map_rf_num\x18\xcb\x01 \x01(\x05\x12\x1d\n\x14localization_age_sec\x18\xcc\x01 \x01(\x03\x12\x1f\n\x16transition_map_numbers\x18\xac\x02 \x03(\x05\x12&\n\x1dunified_sitemap_location_name\x18\xbd\x05 \x01(\t\x12\x1d\n\x14unified_sitemap_pose\x18\xbe\x05 \x03(\x02\x12#\n\x1aunified_sitemap_image_pose\x18\xbf\x05 \x03(\x02\x12#\n\x1amission_planner_mission_id\x18\x84\x07 \x01(\x05\x12!\n\x18mission_planner_state_id\x18\x85\x07 \x01(\x05\x12/\n&mission_planner_distance_from_target_m\x18\x86\x07 \x01(\x02\x12.\n%mission_planner_angle_from_target_rad\x18\x87\x07 \x01(\x02\x12(\n\x1fmission_planner_target_location\x18\x88\x07 \x01(\t\x12,\n#mission_planner_target_sub_location\x18\x89\x07 \x01(\t\x12(\n\x1fmission_planner_target_map_pose\x18\x8a\x07 \x03(\x02\x12\x39\n0mission_planner_trajectory_generation_directions\x18\x8b\x07 \x01(\t\x12\x30\n\'mission_planner_target_detection_status\x18\x98\x07 \x01(\t\x12,\n#mission_planner_target_detection_ts\x18\x99\x07 \x01(\x03\x12-\n$mission_planner_target_detected_pose\x18\x9a\x07 \x03(\x02\x12<\n3mission_planner_target_detection_instantaneous_pose\x18\x9b\x07 \x03(\x02\x12\x1e\n\x15\x65nvironment_tag_names\x18\xf2\x07 \x03(\t\x12\"\n\x19\x65nvironment_tag_rig_poses\x18\xf3\x07 \x03(\x02\x12.\n%environment_tag_unified_sitemap_poses\x18\xf4\x07 \x03(\x02\x12\x18\n\x0fwifi_ip_address\x18\xcc\x08 \x01(\t\x12\x19\n\x10wifi_mac_address\x18\xcd\x08 \x01(\t\x12\x1c\n\x13\x65thernet_ip_address\x18\xd6\x08 \x01(\t\x12\x1d\n\x14\x65thernet_mac_address\x18\xd7\x08 \x01(\t\"?\n\x12LineSegmentMessage\x12\n\n\x02v0\x18\x01 \x03(\x02\x12\n\n\x02v1\x18\x02 \x03(\x02\x12\x11\n\torigin_id\x18\x05 \x01(\t\"~\n\x13LineSegmentsMessage\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x32\n\x05lines\x18\x02 \x03(\x0b\x32#.anantak.message.LineSegmentMessage\x12\x12\n\ntimestamps\x18\x03 \x03(\x03\x12\x11\n\ttarget_id\x18\x05 \x01(\t\"-\n\x0cPointMessage\x12\n\n\x02v0\x18\x01 \x03(\x02\x12\x11\n\torigin_id\x18\x05 \x01(\t\"s\n\rPointsMessage\x12\x0c\n\x04type\x18\x01 \x01(\t\x12-\n\x06points\x18\x02 \x03(\x0b\x32\x1d.anantak.message.PointMessage\x12\x12\n\ntimestamps\x18\x03 \x03(\x03\x12\x11\n\ttarget_id\x18\x05 \x01(\t\"\x8c\x01\n\rBeaconMessage\x12\x0e\n\x06ranges\x18\x02 \x03(\x01\x12\x0b\n\x03imu\x18\x03 \x03(\x01\x12\x10\n\x08magnetic\x18\x04 \x03(\x01\x12\x14\n\x0crange_stdevs\x18\x05 \x03(\x01\x12\x10\n\x08position\x18\x06 \x03(\x01\x12\x16\n\x0eposition_stdev\x18\x07 \x03(\x01\x12\x0c\n\x04\x63ode\x18\x08 \x03(\x03\"\x92\x02\n\x0bWiFiMessage\x12\x0c\n\x04ssid\x18\x02 \x01(\t\x12\x11\n\twifi_mode\x18\x03 \x01(\t\x12\x16\n\x0e\x61p_mac_address\x18\x04 \x01(\t\x12\x18\n\x10inactive_time_ms\x18\x05 \x01(\r\x12\x19\n\x11\x63onnected_time_ms\x18\x06 \x01(\r\x12\x1e\n\x16signal_quality_percent\x18\x07 \x01(\x01\x12\x14\n\x0csignal_level\x18\x08 \x01(\x05\x12\x0f\n\x07\x62\x65\x61\x63ons\x18\t \x01(\x04\x12\x13\n\x0b\x62\x65\x61\x63on_loss\x18\n \x01(\r\x12\x11\n\tfrequency\x18\x0b \x01(\x05\x12\x0f\n\x07\x63hannel\x18\x0c \x01(\x05\x12\x15\n\rchannel_width\x18\r \x01(\t'
+  ,
+  dependencies=[machine__messages__pb2.DESCRIPTOR,])
 
 
 
@@ -66,8 +68,8 @@ _POSESTATEMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41,
-  serialized_end=113,
+  serialized_start=65,
+  serialized_end=137,
 )
 
 
@@ -394,6 +396,20 @@ _POSETRAJECTORYMESSAGE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='permissive_time_left_ms', full_name='anantak.message.PoseTrajectoryMessage.permissive_time_left_ms', index=45,
+      number=1001, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='post_blockage_permissive_time_left_ms', full_name='anantak.message.PoseTrajectoryMessage.post_blockage_permissive_time_left_ms', index=46,
+      number=1002, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -406,8 +422,8 @@ _POSETRAJECTORYMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=116,
-  serialized_end=1383,
+  serialized_start=140,
+  serialized_end=1489,
 )
 
 
@@ -445,8 +461,8 @@ _POSTUREMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1385,
-  serialized_end=1432,
+  serialized_start=1491,
+  serialized_end=1538,
 )
 
 
@@ -554,8 +570,8 @@ _FREESPACEMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1435,
-  serialized_end=1683,
+  serialized_start=1541,
+  serialized_end=1789,
 )
 
 
@@ -784,6 +800,97 @@ _LIGHTINGMESSAGE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='is_estop_pressed', full_name='anantak.message.LightingMessage.is_estop_pressed', index=31,
+      number=163, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='is_key_switch_off', full_name='anantak.message.LightingMessage.is_key_switch_off', index=32,
+      number=164, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='is_in_permissive_starting_mode', full_name='anantak.message.LightingMessage.is_in_permissive_starting_mode', index=33,
+      number=165, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='is_in_move_forward_mode', full_name='anantak.message.LightingMessage.is_in_move_forward_mode', index=34,
+      number=166, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='move_forward_remaining_distance_m', full_name='anantak.message.LightingMessage.move_forward_remaining_distance_m', index=35,
+      number=167, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='is_localizing', full_name='anantak.message.LightingMessage.is_localizing', index=36,
+      number=168, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='localizing_status', full_name='anantak.message.LightingMessage.localizing_status', index=37,
+      number=169, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='next_stations', full_name='anantak.message.LightingMessage.next_stations', index=38,
+      number=300, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='next_station_distance_m', full_name='anantak.message.LightingMessage.next_station_distance_m', index=39,
+      number=301, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='lights_command', full_name='anantak.message.LightingMessage.lights_command', index=40,
+      number=400, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='lights_command_param', full_name='anantak.message.LightingMessage.lights_command_param', index=41,
+      number=401, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='waiting_for_reason', full_name='anantak.message.LightingMessage.waiting_for_reason', index=42,
+      number=500, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='waiting_for_parameter', full_name='anantak.message.LightingMessage.waiting_for_parameter', index=43,
+      number=501, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -796,8 +903,8 @@ _LIGHTINGMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1686,
-  serialized_end=2420,
+  serialized_start=1792,
+  serialized_end=2927,
 )
 
 
@@ -929,273 +1036,287 @@ _ROUTEMESSAGE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ground_lines_delay', full_name='anantak.message.RouteMessage.ground_lines_delay', index=17,
+      name='is_localizing', full_name='anantak.message.RouteMessage.is_localizing', index=17,
+      number=35, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='localizing_status', full_name='anantak.message.RouteMessage.localizing_status', index=18,
+      number=36, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ground_lines_delay', full_name='anantak.message.RouteMessage.ground_lines_delay', index=19,
       number=40, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ground_lines_num', full_name='anantak.message.RouteMessage.ground_lines_num', index=18,
+      name='ground_lines_num', full_name='anantak.message.RouteMessage.ground_lines_num', index=20,
       number=41, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ground_lines_distance', full_name='anantak.message.RouteMessage.ground_lines_distance', index=19,
+      name='ground_lines_distance', full_name='anantak.message.RouteMessage.ground_lines_distance', index=21,
       number=42, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='lidar3d_scan_delay_ms', full_name='anantak.message.RouteMessage.lidar3d_scan_delay_ms', index=20,
+      name='lidar3d_scan_delay_ms', full_name='anantak.message.RouteMessage.lidar3d_scan_delay_ms', index=22,
       number=50, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='lidar3d_scan_interval_ms', full_name='anantak.message.RouteMessage.lidar3d_scan_interval_ms', index=21,
+      name='lidar3d_scan_interval_ms', full_name='anantak.message.RouteMessage.lidar3d_scan_interval_ms', index=23,
       number=51, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='learn_map_num', full_name='anantak.message.RouteMessage.learn_map_num', index=22,
+      name='learn_map_num', full_name='anantak.message.RouteMessage.learn_map_num', index=24,
       number=43, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='num_rigframes', full_name='anantak.message.RouteMessage.num_rigframes', index=23,
+      name='num_rigframes', full_name='anantak.message.RouteMessage.num_rigframes', index=25,
       number=44, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='num_keypoints', full_name='anantak.message.RouteMessage.num_keypoints', index=24,
+      name='num_keypoints', full_name='anantak.message.RouteMessage.num_keypoints', index=26,
       number=45, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='saved_map_num', full_name='anantak.message.RouteMessage.saved_map_num', index=25,
+      name='saved_map_num', full_name='anantak.message.RouteMessage.saved_map_num', index=27,
       number=46, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='lights_brightness', full_name='anantak.message.RouteMessage.lights_brightness', index=26,
+      name='lights_brightness', full_name='anantak.message.RouteMessage.lights_brightness', index=28,
       number=100, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='num_occluded_cameras', full_name='anantak.message.RouteMessage.num_occluded_cameras', index=27,
+      name='num_occluded_cameras', full_name='anantak.message.RouteMessage.num_occluded_cameras', index=29,
       number=110, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='localized_map_num', full_name='anantak.message.RouteMessage.localized_map_num', index=28,
+      name='localized_map_num', full_name='anantak.message.RouteMessage.localized_map_num', index=30,
       number=200, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='localized_map_rigframe_num', full_name='anantak.message.RouteMessage.localized_map_rigframe_num', index=29,
+      name='localized_map_rigframe_num', full_name='anantak.message.RouteMessage.localized_map_rigframe_num', index=31,
       number=201, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='localized_map_route_segment_info', full_name='anantak.message.RouteMessage.localized_map_route_segment_info', index=30,
+      name='localized_map_route_segment_info', full_name='anantak.message.RouteMessage.localized_map_route_segment_info', index=32,
       number=202, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='live_map_rf_num', full_name='anantak.message.RouteMessage.live_map_rf_num', index=31,
+      name='live_map_rf_num', full_name='anantak.message.RouteMessage.live_map_rf_num', index=33,
       number=203, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='localization_age_sec', full_name='anantak.message.RouteMessage.localization_age_sec', index=32,
+      name='localization_age_sec', full_name='anantak.message.RouteMessage.localization_age_sec', index=34,
       number=204, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='transition_map_numbers', full_name='anantak.message.RouteMessage.transition_map_numbers', index=33,
+      name='transition_map_numbers', full_name='anantak.message.RouteMessage.transition_map_numbers', index=35,
       number=300, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='unified_sitemap_location_name', full_name='anantak.message.RouteMessage.unified_sitemap_location_name', index=34,
+      name='unified_sitemap_location_name', full_name='anantak.message.RouteMessage.unified_sitemap_location_name', index=36,
       number=701, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='unified_sitemap_pose', full_name='anantak.message.RouteMessage.unified_sitemap_pose', index=35,
+      name='unified_sitemap_pose', full_name='anantak.message.RouteMessage.unified_sitemap_pose', index=37,
       number=702, type=2, cpp_type=6, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='unified_sitemap_image_pose', full_name='anantak.message.RouteMessage.unified_sitemap_image_pose', index=36,
+      name='unified_sitemap_image_pose', full_name='anantak.message.RouteMessage.unified_sitemap_image_pose', index=38,
       number=703, type=2, cpp_type=6, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='mission_planner_mission_id', full_name='anantak.message.RouteMessage.mission_planner_mission_id', index=37,
+      name='mission_planner_mission_id', full_name='anantak.message.RouteMessage.mission_planner_mission_id', index=39,
       number=900, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='mission_planner_state_id', full_name='anantak.message.RouteMessage.mission_planner_state_id', index=38,
+      name='mission_planner_state_id', full_name='anantak.message.RouteMessage.mission_planner_state_id', index=40,
       number=901, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='mission_planner_distance_from_target_m', full_name='anantak.message.RouteMessage.mission_planner_distance_from_target_m', index=39,
+      name='mission_planner_distance_from_target_m', full_name='anantak.message.RouteMessage.mission_planner_distance_from_target_m', index=41,
       number=902, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='mission_planner_angle_from_target_rad', full_name='anantak.message.RouteMessage.mission_planner_angle_from_target_rad', index=40,
+      name='mission_planner_angle_from_target_rad', full_name='anantak.message.RouteMessage.mission_planner_angle_from_target_rad', index=42,
       number=903, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='mission_planner_target_location', full_name='anantak.message.RouteMessage.mission_planner_target_location', index=41,
+      name='mission_planner_target_location', full_name='anantak.message.RouteMessage.mission_planner_target_location', index=43,
       number=904, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='mission_planner_target_sub_location', full_name='anantak.message.RouteMessage.mission_planner_target_sub_location', index=42,
+      name='mission_planner_target_sub_location', full_name='anantak.message.RouteMessage.mission_planner_target_sub_location', index=44,
       number=905, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='mission_planner_target_map_pose', full_name='anantak.message.RouteMessage.mission_planner_target_map_pose', index=43,
+      name='mission_planner_target_map_pose', full_name='anantak.message.RouteMessage.mission_planner_target_map_pose', index=45,
       number=906, type=2, cpp_type=6, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='mission_planner_trajectory_generation_directions', full_name='anantak.message.RouteMessage.mission_planner_trajectory_generation_directions', index=44,
+      name='mission_planner_trajectory_generation_directions', full_name='anantak.message.RouteMessage.mission_planner_trajectory_generation_directions', index=46,
       number=907, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='mission_planner_target_detection_status', full_name='anantak.message.RouteMessage.mission_planner_target_detection_status', index=45,
+      name='mission_planner_target_detection_status', full_name='anantak.message.RouteMessage.mission_planner_target_detection_status', index=47,
       number=920, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='mission_planner_target_detection_ts', full_name='anantak.message.RouteMessage.mission_planner_target_detection_ts', index=46,
+      name='mission_planner_target_detection_ts', full_name='anantak.message.RouteMessage.mission_planner_target_detection_ts', index=48,
       number=921, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='mission_planner_target_detected_pose', full_name='anantak.message.RouteMessage.mission_planner_target_detected_pose', index=47,
+      name='mission_planner_target_detected_pose', full_name='anantak.message.RouteMessage.mission_planner_target_detected_pose', index=49,
       number=922, type=2, cpp_type=6, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='mission_planner_target_detection_instantaneous_pose', full_name='anantak.message.RouteMessage.mission_planner_target_detection_instantaneous_pose', index=48,
+      name='mission_planner_target_detection_instantaneous_pose', full_name='anantak.message.RouteMessage.mission_planner_target_detection_instantaneous_pose', index=50,
       number=923, type=2, cpp_type=6, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='environment_tag_names', full_name='anantak.message.RouteMessage.environment_tag_names', index=49,
+      name='environment_tag_names', full_name='anantak.message.RouteMessage.environment_tag_names', index=51,
       number=1010, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='environment_tag_rig_poses', full_name='anantak.message.RouteMessage.environment_tag_rig_poses', index=50,
+      name='environment_tag_rig_poses', full_name='anantak.message.RouteMessage.environment_tag_rig_poses', index=52,
       number=1011, type=2, cpp_type=6, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='environment_tag_unified_sitemap_poses', full_name='anantak.message.RouteMessage.environment_tag_unified_sitemap_poses', index=51,
+      name='environment_tag_unified_sitemap_poses', full_name='anantak.message.RouteMessage.environment_tag_unified_sitemap_poses', index=53,
       number=1012, type=2, cpp_type=6, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='wifi_ip_address', full_name='anantak.message.RouteMessage.wifi_ip_address', index=52,
+      name='wifi_ip_address', full_name='anantak.message.RouteMessage.wifi_ip_address', index=54,
       number=1100, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='wifi_mac_address', full_name='anantak.message.RouteMessage.wifi_mac_address', index=53,
+      name='wifi_mac_address', full_name='anantak.message.RouteMessage.wifi_mac_address', index=55,
       number=1101, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ethernet_ip_address', full_name='anantak.message.RouteMessage.ethernet_ip_address', index=54,
+      name='ethernet_ip_address', full_name='anantak.message.RouteMessage.ethernet_ip_address', index=56,
       number=1110, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ethernet_mac_address', full_name='anantak.message.RouteMessage.ethernet_mac_address', index=55,
+      name='ethernet_mac_address', full_name='anantak.message.RouteMessage.ethernet_mac_address', index=57,
       number=1111, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -1213,8 +1334,8 @@ _ROUTEMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2423,
-  serialized_end=4242,
+  serialized_start=2930,
+  serialized_end=4799,
 )
 
 
@@ -1259,8 +1380,8 @@ _LINESEGMENTMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4244,
-  serialized_end=4307,
+  serialized_start=4801,
+  serialized_end=4864,
 )
 
 
@@ -1312,8 +1433,8 @@ _LINESEGMENTSMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4309,
-  serialized_end=4435,
+  serialized_start=4866,
+  serialized_end=4992,
 )
 
 
@@ -1351,8 +1472,8 @@ _POINTMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4437,
-  serialized_end=4482,
+  serialized_start=4994,
+  serialized_end=5039,
 )
 
 
@@ -1404,8 +1525,8 @@ _POINTSMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4484,
-  serialized_end=4599,
+  serialized_start=5041,
+  serialized_end=5156,
 )
 
 
@@ -1478,8 +1599,8 @@ _BEACONMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4602,
-  serialized_end=4742,
+  serialized_start=5159,
+  serialized_end=5299,
 )
 
 
@@ -1587,851 +1708,13 @@ _WIFIMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4745,
-  serialized_end=5019,
-)
-
-
-_STEERINGMESSAGE = _descriptor.Descriptor(
-  name='SteeringMessage',
-  full_name='anantak.message.SteeringMessage',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='motor_is_engaged', full_name='anantak.message.SteeringMessage.motor_is_engaged', index=0,
-      number=10, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='control_target_angle', full_name='anantak.message.SteeringMessage.control_target_angle', index=1,
-      number=20, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='motor_status_word', full_name='anantak.message.SteeringMessage.motor_status_word', index=2,
-      number=30, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='motor_target_angle', full_name='anantak.message.SteeringMessage.motor_target_angle', index=3,
-      number=31, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='motor_current_angle', full_name='anantak.message.SteeringMessage.motor_current_angle', index=4,
-      number=32, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='motor_target_velocity', full_name='anantak.message.SteeringMessage.motor_target_velocity', index=5,
-      number=33, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='motor_current_velocity', full_name='anantak.message.SteeringMessage.motor_current_velocity', index=6,
-      number=34, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='motor_target_accel', full_name='anantak.message.SteeringMessage.motor_target_accel', index=7,
-      number=35, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='motor_target_decel', full_name='anantak.message.SteeringMessage.motor_target_decel', index=8,
-      number=36, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='command', full_name='anantak.message.SteeringMessage.command', index=9,
-      number=50, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='error_code', full_name='anantak.message.SteeringMessage.error_code', index=10,
-      number=100, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5022,
-  serialized_end=5335,
-)
-
-
-_TRACTIONMOTORENCODERMESSAGE = _descriptor.Descriptor(
-  name='TractionMotorEncoderMessage',
-  full_name='anantak.message.TractionMotorEncoderMessage',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='ticks_per_sec', full_name='anantak.message.TractionMotorEncoderMessage.ticks_per_sec', index=0,
-      number=10, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='error_code', full_name='anantak.message.TractionMotorEncoderMessage.error_code', index=1,
-      number=100, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5337,
-  serialized_end=5409,
-)
-
-
-_MACHINESTATESTORAGE = _descriptor.Descriptor(
-  name='MachineStateStorage',
-  full_name='anantak.message.MachineStateStorage',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='algorithm_cycle_time_ms', full_name='anantak.message.MachineStateStorage.algorithm_cycle_time_ms', index=0,
-      number=1, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='rendering_cycle_time_ms', full_name='anantak.message.MachineStateStorage.rendering_cycle_time_ms', index=1,
-      number=2, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='current_ts_us', full_name='anantak.message.MachineStateStorage.current_ts_us', index=2,
-      number=20, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='sensor_ts_us', full_name='anantak.message.MachineStateStorage.sensor_ts_us', index=3,
-      number=21, type=3, cpp_type=2, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='machine_name', full_name='anantak.message.MachineStateStorage.machine_name', index=4,
-      number=50, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='localization_state', full_name='anantak.message.MachineStateStorage.localization_state', index=5,
-      number=101, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='camera_score', full_name='anantak.message.MachineStateStorage.camera_score', index=6,
-      number=102, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='scans_score', full_name='anantak.message.MachineStateStorage.scans_score', index=7,
-      number=103, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='camera_inliers', full_name='anantak.message.MachineStateStorage.camera_inliers', index=8,
-      number=104, type=5, cpp_type=1, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='camera_location_map_frame', full_name='anantak.message.MachineStateStorage.camera_location_map_frame', index=9,
-      number=105, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='scans_location_map_frame', full_name='anantak.message.MachineStateStorage.scans_location_map_frame', index=10,
-      number=106, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='sitemap_pose', full_name='anantak.message.MachineStateStorage.sitemap_pose', index=11,
-      number=107, type=2, cpp_type=6, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='route_id', full_name='anantak.message.MachineStateStorage.route_id', index=12,
-      number=108, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='relocalization_location', full_name='anantak.message.MachineStateStorage.relocalization_location', index=13,
-      number=121, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='time_since_last_attempt_s', full_name='anantak.message.MachineStateStorage.time_since_last_attempt_s', index=14,
-      number=122, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='last_lidar_relocalization_attempt_location', full_name='anantak.message.MachineStateStorage.last_lidar_relocalization_attempt_location', index=15,
-      number=123, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='time_since_last_success_s', full_name='anantak.message.MachineStateStorage.time_since_last_success_s', index=16,
-      number=124, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='last_lidar_relocalization_success_location', full_name='anantak.message.MachineStateStorage.last_lidar_relocalization_success_location', index=17,
-      number=125, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='last_lidar_relocalization_message', full_name='anantak.message.MachineStateStorage.last_lidar_relocalization_message', index=18,
-      number=126, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='zone_id', full_name='anantak.message.MachineStateStorage.zone_id', index=19,
-      number=201, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='places_scans_threshold', full_name='anantak.message.MachineStateStorage.places_scans_threshold', index=20,
-      number=202, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='zone_id2', full_name='anantak.message.MachineStateStorage.zone_id2', index=21,
-      number=203, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='places_scans_threshold2', full_name='anantak.message.MachineStateStorage.places_scans_threshold2', index=22,
-      number=204, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='needs_to_auto_stop_in_zone', full_name='anantak.message.MachineStateStorage.needs_to_auto_stop_in_zone', index=23,
-      number=221, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='needs_to_clear_auto_stop_in_zone', full_name='anantak.message.MachineStateStorage.needs_to_clear_auto_stop_in_zone', index=24,
-      number=222, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='auto_stop_zone_name', full_name='anantak.message.MachineStateStorage.auto_stop_zone_name', index=25,
-      number=223, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='auto_stop_zone_state', full_name='anantak.message.MachineStateStorage.auto_stop_zone_state', index=26,
-      number=224, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='auto_manual', full_name='anantak.message.MachineStateStorage.auto_manual', index=27,
-      number=301, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='key_state', full_name='anantak.message.MachineStateStorage.key_state', index=28,
-      number=302, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='safety_ellipse_state', full_name='anantak.message.MachineStateStorage.safety_ellipse_state', index=29,
-      number=303, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='odometries', full_name='anantak.message.MachineStateStorage.odometries', index=30,
-      number=304, type=2, cpp_type=6, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='tire_0_reading', full_name='anantak.message.MachineStateStorage.tire_0_reading', index=31,
-      number=310, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='tire_1_reading', full_name='anantak.message.MachineStateStorage.tire_1_reading', index=32,
-      number=320, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='steer_reading', full_name='anantak.message.MachineStateStorage.steer_reading', index=33,
-      number=330, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='instant_speed', full_name='anantak.message.MachineStateStorage.instant_speed', index=34,
-      number=357, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='target_speed', full_name='anantak.message.MachineStateStorage.target_speed', index=35,
-      number=358, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='battery_voltage', full_name='anantak.message.MachineStateStorage.battery_voltage', index=36,
-      number=359, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='battery_current', full_name='anantak.message.MachineStateStorage.battery_current', index=37,
-      number=360, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='consumed_current', full_name='anantak.message.MachineStateStorage.consumed_current', index=38,
-      number=361, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='steering_angle', full_name='anantak.message.MachineStateStorage.steering_angle', index=39,
-      number=362, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='display_message', full_name='anantak.message.MachineStateStorage.display_message', index=40,
-      number=390, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='display_lights', full_name='anantak.message.MachineStateStorage.display_lights', index=41,
-      number=391, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='reached_station', full_name='anantak.message.MachineStateStorage.reached_station', index=42,
-      number=401, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='next_station', full_name='anantak.message.MachineStateStorage.next_station', index=43,
-      number=402, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='distance_to_next_station', full_name='anantak.message.MachineStateStorage.distance_to_next_station', index=44,
-      number=403, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='route_state', full_name='anantak.message.MachineStateStorage.route_state', index=45,
-      number=404, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='trip_stations_list', full_name='anantak.message.MachineStateStorage.trip_stations_list', index=46,
-      number=405, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='last_command_ago_sec', full_name='anantak.message.MachineStateStorage.last_command_ago_sec', index=47,
-      number=501, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='last_command', full_name='anantak.message.MachineStateStorage.last_command', index=48,
-      number=502, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='last_command_client_type', full_name='anantak.message.MachineStateStorage.last_command_client_type', index=49,
-      number=503, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='wifi_ssid', full_name='anantak.message.MachineStateStorage.wifi_ssid', index=50,
-      number=602, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='wifi_mode', full_name='anantak.message.MachineStateStorage.wifi_mode', index=51,
-      number=603, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='wifi_ap_mac_address', full_name='anantak.message.MachineStateStorage.wifi_ap_mac_address', index=52,
-      number=604, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='wifi_inactive_time_ms', full_name='anantak.message.MachineStateStorage.wifi_inactive_time_ms', index=53,
-      number=605, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='wifi_connected_time_ms', full_name='anantak.message.MachineStateStorage.wifi_connected_time_ms', index=54,
-      number=606, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='wifi_signal_quality_percent', full_name='anantak.message.MachineStateStorage.wifi_signal_quality_percent', index=55,
-      number=607, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='wifi_signal_level', full_name='anantak.message.MachineStateStorage.wifi_signal_level', index=56,
-      number=608, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='wifi_beacons', full_name='anantak.message.MachineStateStorage.wifi_beacons', index=57,
-      number=609, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='wifi_beacon_loss', full_name='anantak.message.MachineStateStorage.wifi_beacon_loss', index=58,
-      number=610, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='wifi_frequency', full_name='anantak.message.MachineStateStorage.wifi_frequency', index=59,
-      number=611, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='wifi_channel', full_name='anantak.message.MachineStateStorage.wifi_channel', index=60,
-      number=612, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='wifi_channel_width', full_name='anantak.message.MachineStateStorage.wifi_channel_width', index=61,
-      number=613, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='unified_sitemap_location_name', full_name='anantak.message.MachineStateStorage.unified_sitemap_location_name', index=62,
-      number=701, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='unified_sitemap_pose', full_name='anantak.message.MachineStateStorage.unified_sitemap_pose', index=63,
-      number=702, type=2, cpp_type=6, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='unified_sitemap_image_pose', full_name='anantak.message.MachineStateStorage.unified_sitemap_image_pose', index=64,
-      number=703, type=2, cpp_type=6, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5412,
-  serialized_end=7295,
-)
-
-
-_MACHINESTATESTORAGEDATABASE = _descriptor.Descriptor(
-  name='MachineStateStorageDatabase',
-  full_name='anantak.message.MachineStateStorageDatabase',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='machine_state_storage_msg', full_name='anantak.message.MachineStateStorageDatabase.machine_state_storage_msg', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=7297,
-  serialized_end=7399,
-)
-
-
-_REPORTERMESSAGE = _descriptor.Descriptor(
-  name='ReporterMessage',
-  full_name='anantak.message.ReporterMessage',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='unique_id', full_name='anantak.message.ReporterMessage.unique_id', index=0,
-      number=10, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='owner_name', full_name='anantak.message.ReporterMessage.owner_name', index=1,
-      number=11, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='severity', full_name='anantak.message.ReporterMessage.severity', index=2,
-      number=12, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='message', full_name='anantak.message.ReporterMessage.message', index=3,
-      number=13, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='format', full_name='anantak.message.ReporterMessage.format', index=4,
-      number=14, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='last_timestamp_us', full_name='anantak.message.ReporterMessage.last_timestamp_us', index=5,
-      number=15, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='source_func', full_name='anantak.message.ReporterMessage.source_func', index=6,
-      number=16, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='source_filename', full_name='anantak.message.ReporterMessage.source_filename', index=7,
-      number=17, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='source_line_num', full_name='anantak.message.ReporterMessage.source_line_num', index=8,
-      number=18, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='lifespan_ms', full_name='anantak.message.ReporterMessage.lifespan_ms', index=9,
-      number=20, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='publish_interval_us', full_name='anantak.message.ReporterMessage.publish_interval_us', index=10,
-      number=21, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='user_id', full_name='anantak.message.ReporterMessage.user_id', index=11,
-      number=30, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='user_description', full_name='anantak.message.ReporterMessage.user_description', index=12,
-      number=31, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='user_category', full_name='anantak.message.ReporterMessage.user_category', index=13,
-      number=32, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='user_command', full_name='anantak.message.ReporterMessage.user_command', index=14,
-      number=33, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='user_link', full_name='anantak.message.ReporterMessage.user_link', index=15,
-      number=34, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='user_status', full_name='anantak.message.ReporterMessage.user_status', index=16,
-      number=35, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='user_priority', full_name='anantak.message.ReporterMessage.user_priority', index=17,
-      number=36, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=7402,
-  serialized_end=7808,
-)
-
-
-_REPORTERDATABASE = _descriptor.Descriptor(
-  name='ReporterDatabase',
-  full_name='anantak.message.ReporterDatabase',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='reporter_messages', full_name='anantak.message.ReporterDatabase.reporter_messages', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=7810,
-  serialized_end=7889,
+  serialized_start=5302,
+  serialized_end=5576,
 )
 
 _POSETRAJECTORYMESSAGE.fields_by_name['poses'].message_type = _POSESTATEMESSAGE
 _LINESEGMENTSMESSAGE.fields_by_name['lines'].message_type = _LINESEGMENTMESSAGE
 _POINTSMESSAGE.fields_by_name['points'].message_type = _POINTMESSAGE
-_MACHINESTATESTORAGEDATABASE.fields_by_name['machine_state_storage_msg'].message_type = _MACHINESTATESTORAGE
-_REPORTERDATABASE.fields_by_name['reporter_messages'].message_type = _REPORTERMESSAGE
 DESCRIPTOR.message_types_by_name['PoseStateMessage'] = _POSESTATEMESSAGE
 DESCRIPTOR.message_types_by_name['PoseTrajectoryMessage'] = _POSETRAJECTORYMESSAGE
 DESCRIPTOR.message_types_by_name['PostureMessage'] = _POSTUREMESSAGE
@@ -2444,12 +1727,6 @@ DESCRIPTOR.message_types_by_name['PointMessage'] = _POINTMESSAGE
 DESCRIPTOR.message_types_by_name['PointsMessage'] = _POINTSMESSAGE
 DESCRIPTOR.message_types_by_name['BeaconMessage'] = _BEACONMESSAGE
 DESCRIPTOR.message_types_by_name['WiFiMessage'] = _WIFIMESSAGE
-DESCRIPTOR.message_types_by_name['SteeringMessage'] = _STEERINGMESSAGE
-DESCRIPTOR.message_types_by_name['TractionMotorEncoderMessage'] = _TRACTIONMOTORENCODERMESSAGE
-DESCRIPTOR.message_types_by_name['MachineStateStorage'] = _MACHINESTATESTORAGE
-DESCRIPTOR.message_types_by_name['MachineStateStorageDatabase'] = _MACHINESTATESTORAGEDATABASE
-DESCRIPTOR.message_types_by_name['ReporterMessage'] = _REPORTERMESSAGE
-DESCRIPTOR.message_types_by_name['ReporterDatabase'] = _REPORTERDATABASE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 PoseStateMessage = _reflection.GeneratedProtocolMessageType('PoseStateMessage', (_message.Message,), {
@@ -2535,48 +1812,6 @@ WiFiMessage = _reflection.GeneratedProtocolMessageType('WiFiMessage', (_message.
   # @@protoc_insertion_point(class_scope:anantak.message.WiFiMessage)
   })
 _sym_db.RegisterMessage(WiFiMessage)
-
-SteeringMessage = _reflection.GeneratedProtocolMessageType('SteeringMessage', (_message.Message,), {
-  'DESCRIPTOR' : _STEERINGMESSAGE,
-  '__module__' : 'state_messages_pb2'
-  # @@protoc_insertion_point(class_scope:anantak.message.SteeringMessage)
-  })
-_sym_db.RegisterMessage(SteeringMessage)
-
-TractionMotorEncoderMessage = _reflection.GeneratedProtocolMessageType('TractionMotorEncoderMessage', (_message.Message,), {
-  'DESCRIPTOR' : _TRACTIONMOTORENCODERMESSAGE,
-  '__module__' : 'state_messages_pb2'
-  # @@protoc_insertion_point(class_scope:anantak.message.TractionMotorEncoderMessage)
-  })
-_sym_db.RegisterMessage(TractionMotorEncoderMessage)
-
-MachineStateStorage = _reflection.GeneratedProtocolMessageType('MachineStateStorage', (_message.Message,), {
-  'DESCRIPTOR' : _MACHINESTATESTORAGE,
-  '__module__' : 'state_messages_pb2'
-  # @@protoc_insertion_point(class_scope:anantak.message.MachineStateStorage)
-  })
-_sym_db.RegisterMessage(MachineStateStorage)
-
-MachineStateStorageDatabase = _reflection.GeneratedProtocolMessageType('MachineStateStorageDatabase', (_message.Message,), {
-  'DESCRIPTOR' : _MACHINESTATESTORAGEDATABASE,
-  '__module__' : 'state_messages_pb2'
-  # @@protoc_insertion_point(class_scope:anantak.message.MachineStateStorageDatabase)
-  })
-_sym_db.RegisterMessage(MachineStateStorageDatabase)
-
-ReporterMessage = _reflection.GeneratedProtocolMessageType('ReporterMessage', (_message.Message,), {
-  'DESCRIPTOR' : _REPORTERMESSAGE,
-  '__module__' : 'state_messages_pb2'
-  # @@protoc_insertion_point(class_scope:anantak.message.ReporterMessage)
-  })
-_sym_db.RegisterMessage(ReporterMessage)
-
-ReporterDatabase = _reflection.GeneratedProtocolMessageType('ReporterDatabase', (_message.Message,), {
-  'DESCRIPTOR' : _REPORTERDATABASE,
-  '__module__' : 'state_messages_pb2'
-  # @@protoc_insertion_point(class_scope:anantak.message.ReporterDatabase)
-  })
-_sym_db.RegisterMessage(ReporterDatabase)
 
 
 # @@protoc_insertion_point(module_scope)

@@ -8,9 +8,9 @@ python3 --version
 # So we actually have Jetpack 4.5
 
 # Packages that are already there
-#  cv2   - 4.1.1
-#  numpy - 1.13.3
-#  PIL   - 8.4.0
+#  cv2   - 4.1.1    (opencv-python)
+#  numpy - 1.13.3   (numpy)
+#  PIL   - 8.4.0    (pillow)
 
 
 # We first need to install scikit-image and scikit-learn 

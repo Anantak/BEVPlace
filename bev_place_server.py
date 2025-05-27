@@ -32,8 +32,8 @@ from network.groupnet import group_config
 import logging
 from logging.handlers import TimedRotatingFileHandler
 
-sys.path.append('/home/ubuntu/Anantak/Admin/messaging');
-import sensor_messages_pb2
+sys.path.append('/home/ubuntu/Anantak/Admin/messaging/messages');
+from messages import sensor_messages_pb2
 
 def input_transform():
     return transforms.Compose([
