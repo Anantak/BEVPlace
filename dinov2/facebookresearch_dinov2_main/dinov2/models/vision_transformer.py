@@ -204,7 +204,7 @@ class DinoVisionTransformer(nn.Module):
         patch_pos_embed = nn.functional.interpolate(
             patch_pos_embed.reshape(1, M, M, dim).permute(0, 3, 1, 2),
             mode="bicubic",
-            antialias=self.interpolate_antialias,
+            # antialias=self.interpolate_antialias,
             **kwargs,
         )
         assert (w0, h0) == patch_pos_embed.shape[-2:]
