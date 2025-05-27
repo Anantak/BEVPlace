@@ -7,7 +7,6 @@ os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = "python"
 import sys
 import signal
 import argparse
-import zmq
 import json 
 import sched, time
 
@@ -32,7 +31,9 @@ from network.groupnet import group_config
 import logging
 from logging.handlers import TimedRotatingFileHandler
 
-sys.path.append('/home/ubuntu/Anantak/Admin/messaging/messages');
+import zmq
+
+sys.path.append('/home/ubuntu/Anantak/BEVPlace/messages');
 from messages import sensor_messages_pb2
 
 def input_transform():
@@ -192,7 +193,7 @@ class BEVPlaceServer:
         global_features = BEVPlaceServer.encodeImage(img)
         encode_end_time = time.time()
 
-        global_features_array = global_features.flatten()
+        global_features_array = global_features.flatten().tolist()
         
         sensor_msg.image_msg.description.extend(global_features_array)
         sensor_msg.header.type = "Descriptor"
